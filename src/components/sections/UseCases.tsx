@@ -1,14 +1,6 @@
 import { Card } from "@/components/ui/card";
-import { Video, Newspaper, ChefHat, BookOpen, Globe, Play, Code, TestTube, Server, Layers, GitBranch, Cpu, Smartphone, Presentation, Battery } from "lucide-react";
+import { Code, TestTube, Server, Layers, GitBranch, Cpu, Smartphone, Presentation, Battery, Globe } from "lucide-react";
 
-const dadUseCases = [
-  { icon: Video, title: "Video Calls", description: "Clear front camera and 8-speaker audio for family calls" },
-  { icon: Newspaper, title: "News & Cricket", description: "Large 13.2\" display for comfortable reading and streaming" },
-  { icon: ChefHat, title: "Kitchen Recipes", description: "Stable stand mode, easy to clean screen, bright display" },
-  { icon: BookOpen, title: "Reading & Browsing", description: "High resolution reduces eye strain, adjustable brightness" },
-  { icon: Globe, title: "Second Screen", description: "Use as wireless display or productivity companion" },
-  { icon: Play, title: "Entertainment", description: "8 speakers, 144Hz smooth playback, HDR support" }
-];
 
 const studentUseCases = [
   { 
@@ -66,34 +58,12 @@ const studentUseCases = [
 const UseCases = () => {
   return (
     <section id="usecases" className="section-padding max-w-7xl mx-auto">
-      <h2 className="text-4xl font-bold text-center mb-4">Use Cases</h2>
+      <h2 className="text-4xl font-bold text-center mb-4">How I'll Use It as a CS Student</h2>
       <p className="text-center text-muted-foreground mb-12">
-        Practical applications for everyday use
+        Technical use-cases for Computer Science Engineering workflow
       </p>
 
-      {/* Dad's Use Cases */}
-      <div className="mb-16">
-        <h3 className="text-2xl font-bold mb-6">For Dad</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {dadUseCases.map((useCase, index) => (
-            <Card 
-              key={index} 
-              className="p-6 bg-card border-border hover:card-glow transition-all duration-300"
-            >
-              <useCase.icon className="h-8 w-8 text-primary mb-4" />
-              <h4 className="text-lg font-bold mb-2">{useCase.title}</h4>
-              <p className="text-sm text-muted-foreground">{useCase.description}</p>
-            </Card>
-          ))}
-        </div>
-      </div>
-
-      {/* Student Use Cases */}
       <div>
-        <h3 className="text-2xl font-bold mb-2">How I'll Use It as a CS Student</h3>
-        <p className="text-muted-foreground mb-6">
-          Technical use-cases for Computer Science Engineering workflow
-        </p>
         <div className="grid grid-cols-1 gap-6 mb-8">
           {studentUseCases.map((useCase, index) => (
             <Card 

@@ -53,9 +53,9 @@ const batteryData = [
 ];
 
 const priceData = [
-  { device: "OnePlus Pad 3", price: 549 },
-  { device: "iPad Air M2", price: 799 },
-  { device: "iPad Pro 11 M2", price: 999 }
+  { device: "OnePlus Pad 3", price: 45999 },
+  { device: "iPad Air M2", price: 64900 },
+  { device: "iPad Pro 11 M2", price: 81900 }
 ];
 
 const DeviceComparison = () => {
@@ -154,7 +154,7 @@ const DeviceComparison = () => {
 
         {/* Price Comparison */}
         <Card className="p-6 bg-card border-border">
-          <h3 className="text-2xl font-bold mb-6">Price Comparison (USD)</h3>
+          <h3 className="text-2xl font-bold mb-6">Price Comparison (INR)</h3>
           <ResponsiveContainer width="100%" height={300}>
             <BarChart data={priceData}>
               <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />
@@ -168,7 +168,7 @@ const DeviceComparison = () => {
             </BarChart>
           </ResponsiveContainer>
           <p className="text-xs text-muted-foreground mt-4">
-            Base model pricing (256GB configuration where applicable)
+            Base model pricing in India (256GB configuration where applicable)
           </p>
         </Card>
       </div>
