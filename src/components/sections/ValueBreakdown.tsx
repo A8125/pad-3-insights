@@ -8,15 +8,15 @@ const valueIndex = [
 ];
 
 const totalCost = [
-  { device: "OnePlus Pad 3", device_cost: 549, accessories: 80, depreciation: 150 },
-  { device: "iPad Air M2", device_cost: 799, accessories: 150, depreciation: 200 },
-  { device: "iPad Pro 11 M2", device_cost: 999, accessories: 200, depreciation: 250 }
+  { device: "OnePlus Pad 3", device_cost: 45999, accessories: 6500, depreciation: 12000 },
+  { device: "iPad Air M2", device_cost: 64900, accessories: 12000, depreciation: 16000 },
+  { device: "iPad Pro 11 M2", device_cost: 81900, accessories: 16000, depreciation: 20000 }
 ];
 
 const costVsCapability = [
-  { x: 549, y: 89, z: 100, device: "OnePlus Pad 3" },
-  { x: 799, y: 85, z: 100, device: "iPad Air M2" },
-  { x: 999, y: 92, z: 100, device: "iPad Pro 11 M2" }
+  { x: 45999, y: 89, z: 100, device: "OnePlus Pad 3" },
+  { x: 64900, y: 85, z: 100, device: "iPad Air M2" },
+  { x: 81900, y: 92, z: 100, device: "iPad Pro 11 M2" }
 ];
 
 const ValueBreakdown = () => {
@@ -50,7 +50,7 @@ const ValueBreakdown = () => {
 
         {/* 3-Year Total Cost */}
         <Card className="p-6 bg-card border-border">
-          <h3 className="text-2xl font-bold mb-6">3-Year Total Cost of Ownership (USD)</h3>
+          <h3 className="text-2xl font-bold mb-6">3-Year Total Cost of Ownership (INR)</h3>
           <ResponsiveContainer width="100%" height={350}>
             <BarChart data={totalCost}>
               <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />
@@ -81,9 +81,9 @@ const ValueBreakdown = () => {
                 type="number" 
                 dataKey="x" 
                 name="Price" 
-                unit="$" 
+                unit="₹"
                 stroke="hsl(var(--muted-foreground))"
-                label={{ value: 'Price (USD)', position: 'insideBottom', offset: -10 }}
+                label={{ value: 'Price (INR)', position: 'insideBottom', offset: -10 }}
               />
               <YAxis 
                 type="number" 
@@ -102,7 +102,7 @@ const ValueBreakdown = () => {
                     return (
                       <div className="bg-card border border-border p-3 rounded">
                         <p className="font-bold">{payload[0].payload.device}</p>
-                        <p className="text-sm">Price: ${payload[0].value}</p>
+                        <p className="text-sm">Price: ₹{payload[0].value.toLocaleString('en-IN')}</p>
                         <p className="text-sm">Capability: {payload[1].value}/100</p>
                       </div>
                     );
@@ -126,16 +126,16 @@ const ValueBreakdown = () => {
           <h3 className="text-2xl font-bold mb-4">Value Summary</h3>
           <div className="space-y-4 text-muted-foreground">
             <p>
-              <span className="text-primary font-bold">$250 less</span> than iPad Air M2 with comparable performance
+              <span className="text-primary font-bold">₹18,901 less</span> than iPad Air M2 with comparable performance
             </p>
             <p>
-              <span className="text-primary font-bold">$450 less</span> than iPad Pro 11 M2 with practical feature parity
+              <span className="text-primary font-bold">₹35,901 less</span> than iPad Pro 11 M2 with practical feature parity
             </p>
             <p>
               <span className="text-primary font-bold">8.9/10</span> value index — highest among compared devices
             </p>
             <p>
-              <span className="text-primary font-bold">$779 total</span> 3-year ownership cost vs $1,149 (iPad Air) and $1,449 (iPad Pro)
+              <span className="text-primary font-bold">₹64,499 total</span> 3-year ownership cost vs ₹92,900 (iPad Air) and ₹1,17,900 (iPad Pro)
             </p>
           </div>
         </Card>
