@@ -91,18 +91,21 @@ const features = [
 const FeaturesGrid = () => {
   return (
     <section id="features" className="section-padding max-w-7xl mx-auto">
-      <h2 className="text-4xl font-bold text-center mb-4">Complete Specifications</h2>
-      <p className="text-center text-muted-foreground mb-12">
-        Every spec matters. Here's what you get and why it's practical.
-      </p>
+      <div className="animate-fade-in">
+        <h2 className="text-4xl font-bold text-center mb-4">Complete Specifications</h2>
+        <p className="text-center text-muted-foreground mb-12">
+          Every spec matters. Here's what you get and why it's practical.
+        </p>
+      </div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {features.map((feature, index) => (
           <Card 
             key={index} 
-            className="p-6 bg-card border-border hover:card-glow transition-all duration-300 hover:scale-[1.02]"
+            className="p-6 bg-card border-border hover:card-glow transition-all duration-300 hover:scale-[1.02] animate-fade-in group"
+            style={{ animationDelay: `${index * 0.05}s` }}
           >
-            <feature.icon className="h-8 w-8 text-primary mb-4" />
+            <feature.icon className="h-8 w-8 text-primary mb-4 group-hover:scale-110 transition-transform duration-300" />
             <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
             <p className="text-sm text-primary mb-2">{feature.spec}</p>
             <p className="text-sm text-muted-foreground">{feature.why}</p>
