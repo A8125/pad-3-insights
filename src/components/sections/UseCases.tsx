@@ -58,20 +58,23 @@ const studentUseCases = [
 const UseCases = () => {
   return (
     <section id="usecases" className="section-padding max-w-7xl mx-auto">
-      <h2 className="text-4xl font-bold text-center mb-4">How I'll Use It as a CS Student</h2>
-      <p className="text-center text-muted-foreground mb-12">
-        Technical use-cases for Computer Science Engineering workflow
-      </p>
+      <div className="animate-fade-in">
+        <h2 className="text-4xl font-bold text-center mb-4">How I'll Use It as a CS Student</h2>
+        <p className="text-center text-muted-foreground mb-12">
+          Technical use-cases for Computer Science Engineering workflow
+        </p>
+      </div>
 
       <div>
         <div className="grid grid-cols-1 gap-6 mb-8">
           {studentUseCases.map((useCase, index) => (
             <Card 
               key={index} 
-              className="p-6 bg-card border-border hover:card-glow transition-all duration-300"
+              className="p-6 bg-card border-border hover:card-glow transition-all duration-300 hover:translate-x-2 animate-fade-in group"
+              style={{ animationDelay: `${index * 0.08}s` }}
             >
               <div className="flex gap-4">
-                <useCase.icon className="h-8 w-8 text-primary flex-shrink-0 mt-1" />
+                <useCase.icon className="h-8 w-8 text-primary flex-shrink-0 mt-1 group-hover:scale-110 transition-transform duration-300" />
                 <div>
                   <h4 className="text-lg font-bold mb-2">{useCase.title}</h4>
                   <p className="text-sm text-muted-foreground">{useCase.description}</p>
@@ -81,7 +84,7 @@ const UseCases = () => {
           ))}
         </div>
         
-        <Card className="p-6 bg-secondary border-border">
+        <Card className="p-6 bg-secondary border-border animate-fade-in hover:card-glow transition-all duration-300" style={{ animationDelay: '0.8s' }}>
           <p className="italic text-sm">
             "As a Computer Science Engineering student, I need a device that's fast enough to test real workloads, 
             flexible enough to sideload and iterate CAED designs, and reliable enough to demo my projects — 
