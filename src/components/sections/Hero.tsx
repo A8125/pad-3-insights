@@ -17,12 +17,16 @@ const Hero = () => {
           <span className="text-gradient inline-block animate-fade-in" style={{ animationDelay: '0.2s' }}>Practical Power That Makes Sense</span>
         </h1>
         
-        <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: '0.4s' }}>
+        <p className="text-sm md:text-base text-muted-foreground/80 animate-fade-in -mt-4" style={{ animationDelay: '0.3s' }}>
+          by <span className="text-primary font-semibold">JS Abhishek</span>
+        </p>
+        
+        <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: '0.5s' }}>
           As a Computer Science Engineering student, I compared tablets across performance, display quality, 
           audio, and price. The OnePlus Pad 3 has the best performance-to-value ratio.
         </p>
 
-        <div className="flex flex-wrap gap-4 justify-center pt-4 animate-fade-in" style={{ animationDelay: '0.6s' }}>
+        <div className="flex flex-wrap gap-4 justify-center pt-4 animate-fade-in" style={{ animationDelay: '0.7s' }}>
           <Button size="lg" className="text-lg hover:scale-105 transition-all duration-300" asChild>
             <a href="#comparison">Compare with iPad</a>
           </Button>
